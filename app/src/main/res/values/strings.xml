@@ -12,32 +12,40 @@
     <string name="nombre_usuario">Sara Caballero</string>
     <string name="correo_usuario">aracelli.caballero@gmail.com</string>
 
+    <!--Etiquetas de los tabs-->
+    <string name="tab_noticias">Noticias</string>
+    <string name="tab_solicitudes">Solicitudes</string>
+    <string name="tab_versionweb">Versión web</string>
+    <string name="tab_buscar">Buscar</string>
+    <string name="tab_publicar">Publicar</string>
+    <string name="tab_actividad">Actividad</string>
+    <string name="tab_aplicaciones">Aplicaciones</string>
+    <string name="tab_circulos">Círculos</string>
+    <string name="tab_notificaciones">Notificaciones</string>
+    <string name="tab_mensajes">Mensajes</string>
+
     <string-array name="tabs_facebook">
-        <item>Noticias</item>
-        <item>Solicitudes</item>
-        <item>Versión web</item>
+        <item>@string/tab_noticias</item>
+        <item>@string/tab_solicitudes</item>
+        <item>@string/tab_versionweb</item>
     </string-array>
 
     <string-array name="tabs_instagram">
-        <item>Buscar</item>
-        <item>Publicar</item>
-        <item>Actividad</item>
+        <item>@string/tab_buscar</item>
+        <item>@string/tab_publicar</item>
+        <item>@string/tab_actividad</item>
     </string-array>
 
     <string-array name="tabs_googleplus">
-        <item>Aplicaciones</item>
-        <item>Círculos</item>
-        <item>Notificaciones</item>
+        <item>@string/tab_aplicaciones</item>
+        <item>@string/tab_circulos</item>
+        <item>@string/tab_notificaciones</item>
     </string-array>
 
     <string-array name="tabs_twitter">
-        <item>Notificaciones</item>
-        <item>Mensajes</item>
-        <item>Buscar</item>
+        <item>@string/tab_notificaciones</item>
+        <item>@string/tab_mensajes</item>
+        <item>@string/tab_buscar</item>
     </string-array>
 
-    <!--
-    <string name="without_tabs">Sin pestañas</string>
-    <string name="with_tabs">Con pestañas</string>
--->
 </resources>

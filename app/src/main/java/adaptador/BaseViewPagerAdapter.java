@@ -15,9 +15,12 @@ import com.nextu.sacc.evaluacionfinal_modulo6.R;
 public class BaseViewPagerAdapter extends FragmentStatePagerAdapter {
 
     private String[] tabs;
+    private int idItem;
 
-    public BaseViewPagerAdapter(FragmentManager manager, Context context, int idItem) {
+    public BaseViewPagerAdapter(FragmentManager manager, Context context, int idItemSeleccionado) {
         super(manager);
+
+        idItem = idItemSeleccionado;
 
         switch (idItem){
             case R.id.nav_facebook:
@@ -40,7 +43,7 @@ public class BaseViewPagerAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        return BasicFragment.getInstance(tabs[position], position);
+        return BasicFragment.getInstance(tabs[position]/*, idItem*/);
     }
 
     @Override

@@ -31,15 +31,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         // Busca el toolbar
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+
         // Reemplaza el toolbar por el actionbar
         setSupportActionBar(toolbar);
 
         // Busca el drawerLayout
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+
         // Listener para el drawerLayout
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.nav_drawer_open, R.string.nav_drawer_close);
+
         // Asigna el listener al drawerLayout
         drawerLayout.addDrawerListener(toggle);
+
         // Sincroniza el estado
         toggle.syncState();
 
@@ -47,6 +51,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if (navigationView != null){
             navigationView.setNavigationItemSelectedListener(this);
         }
+
+        // Muestra el fragmento inicial
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.container, new SinTabsFragment())
+                .commit();
     }
 
     @Override

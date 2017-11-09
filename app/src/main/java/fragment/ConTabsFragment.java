@@ -7,7 +7,6 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -63,13 +62,13 @@ public class ConTabsFragment extends Fragment {
                         tab = tabLayout.getTabAt(i);
                         switch (i){
                             case 0:
-                                icono = ContextCompat.getDrawable(activity, R.drawable.fb_noticias);
+                                icono = ContextCompat.getDrawable(activity, R.drawable.noticias);
                                 break;
                             case 1:
-                                icono = ContextCompat.getDrawable(activity, R.drawable.fb_solicitudes);
+                                icono = ContextCompat.getDrawable(activity, R.drawable.solicitudes);
                                 break;
                             case 2:
-                                icono = ContextCompat.getDrawable(activity, R.drawable.fb_web);
+                                icono = ContextCompat.getDrawable(activity, R.drawable.versionweb);
                                 break;
                         }
                         if (tab != null) {
@@ -84,13 +83,13 @@ public class ConTabsFragment extends Fragment {
                         tab = tabLayout.getTabAt(i);
                         switch (i){
                             case 0:
-                                icono = ContextCompat.getDrawable(activity, R.drawable.ig_magnify);
+                                icono = ContextCompat.getDrawable(activity, R.drawable.buscar);
                                 break;
                             case 1:
-                                icono = ContextCompat.getDrawable(activity, R.drawable.ig_camera);
+                                icono = ContextCompat.getDrawable(activity, R.drawable.publicar);
                                 break;
                             case 2:
-                                icono = ContextCompat.getDrawable(activity, R.drawable.ig_heart);
+                                icono = ContextCompat.getDrawable(activity, R.drawable.actividad);
                                 break;
                         }
                         if (tab != null) {
@@ -105,13 +104,13 @@ public class ConTabsFragment extends Fragment {
                         tab = tabLayout.getTabAt(i);
                         switch (i){
                             case 0:
-                                icono = ContextCompat.getDrawable(activity, R.drawable.gp_apps);
+                                icono = ContextCompat.getDrawable(activity, R.drawable.aplicaciones);
                                 break;
                             case 1:
-                                icono = ContextCompat.getDrawable(activity, R.drawable.gp_circles);
+                                icono = ContextCompat.getDrawable(activity, R.drawable.circulos);
                                 break;
                             case 2:
-                                icono = ContextCompat.getDrawable(activity, R.drawable.gp_bell);
+                                icono = ContextCompat.getDrawable(activity, R.drawable.notificaciones);
                                 break;
                         }
                         if (tab != null) {
@@ -126,13 +125,13 @@ public class ConTabsFragment extends Fragment {
                         tab = tabLayout.getTabAt(i);
                         switch (i){
                             case 0:
-                                icono = ContextCompat.getDrawable(activity, R.drawable.gp_bell);
+                                icono = ContextCompat.getDrawable(activity, R.drawable.notificaciones);
                                 break;
                             case 1:
-                                icono = ContextCompat.getDrawable(activity, R.drawable.tw_message);
+                                icono = ContextCompat.getDrawable(activity, R.drawable.mensajes);
                                 break;
                             case 2:
-                                icono = ContextCompat.getDrawable(activity, R.drawable.ig_magnify);
+                                icono = ContextCompat.getDrawable(activity, R.drawable.buscar);
                                 break;
                         }
                         if (tab != null) {

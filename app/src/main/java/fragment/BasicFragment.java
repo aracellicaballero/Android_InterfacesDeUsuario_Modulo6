@@ -23,13 +23,12 @@ public class BasicFragment extends Fragment {
     private static final String ARG_TITLE = "titulo";
     private static final String ARG_DRAWABLE = "imagen";
 
-    public static BasicFragment getInstance(String title, int imagen) {
-        Log.wtf("MENSAJE", "getInstance: " + title);
+    public static BasicFragment getInstance(String title){
+        //Log.wtf("MENSAJE", "getInstance: " + title);
         BasicFragment fragment = new BasicFragment();
 
         Bundle bundle = new Bundle();
         bundle.putString(ARG_TITLE, title);
-        bundle.putInt(ARG_DRAWABLE, imagen);
 
         fragment.setArguments(bundle);
         return fragment;
@@ -40,7 +39,7 @@ public class BasicFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         if (savedInstanceState != null){
             this.tituloActual = savedInstanceState.getString(ARG_TITLE);
-            this.imagenActual = savedInstanceState.getInt(ARG_DRAWABLE);
+            //this.imagenActual = savedInstanceState.getInt(ARG_DRAWABLE);
         }
 
         return inflater.inflate(R.layout.fragment_basic, container, false);
@@ -60,14 +59,13 @@ public class BasicFragment extends Fragment {
 
         Bundle arguments = getArguments();
         if (arguments != null)
-            updateView(arguments.getString(ARG_TITLE), arguments.getInt(ARG_DRAWABLE));
+            updateView(arguments.getString(ARG_TITLE));
         else if (tituloActual != null)
-            updateView(tituloActual, imagenActual);
+            updateView(tituloActual);
     }
 
-    private void updateView(String title, int idImagen) {
-        //this.imageView.setImageDrawable(getResources().getDrawable(idImagen));
-        ////////////////////////////////////////////////////////////////////////////////////////////
+    private void updateView(String title) {
+        this.imageView.setImageDrawable(getResources().getDrawable(imagenSegunTexto(title)));
         this.textTitulo.setText(title);
     }
 
@@ -75,6 +73,34 @@ public class BasicFragment extends Fragment {
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putString(ARG_TITLE, tituloActual);
-        outState.putInt(ARG_DRAWABLE, imagenActual);
+    }
+
+    private int imagenSegunTexto(String titulo){
+        int retorno = R.drawable.home;
+
+        if (titulo.equals(getResources().getString(R.string.tab_noticias))){
+            retorno = R.drawable.noticias;
+        }else if (titulo.equals(getResources().getString(R.string.tab_solicitudes))){
+            retorno = R.drawable.solicitudes;
+        }else if (titulo.equals(getResources().getString(R.string.tab_versionweb))){
+            retorno = R.drawable.versionweb;
+        }else if (titulo.equals(getResources().getString(R.string.tab_buscar))){
+            retorno = R.drawable.buscar;
+        }else if (titulo.equals(getResources().getString(R.string.tab_publicar))){
+            retorno = R.drawable.publicar;
+        }else if (titulo.equals(getResources().getString(R.string.tab_actividad))){
+            retorno = R.drawable.actividad;
+        }else if (titulo.equals(getResources().getString(R.string.tab_aplicaciones))){
+            retorno = R.drawable.aplicaciones;
+        }else if (titulo.equals(getResources().getString(R.string.tab_circulos))){
+            retorno = R.drawable.circulos;
+        }else if (titulo.equals(getResources().getString(R.string.tab_notificaciones))){
+            retorno = R.drawable.notificaciones;
+        }else if (titulo.equals(getResources().getString(R.string.tab_mensajes))){
+            retorno = R.drawable.mensajes;
+        }
+
+        // Retorna
+        return retorno;
     }
 }
