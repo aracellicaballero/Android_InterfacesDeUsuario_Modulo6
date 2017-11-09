@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">Mis redes sociales</string>
+    <string name="nav_drawer_open">Abrir cajón</string>
+    <string name="nav_drawer_close">Cerrar cajón</string>
+
+    <string name="home">Inicio</string>
+    <string name="facebook">Facebook</string>
+    <string name="instagram">Instagram</string>
+    <string name="google_plus">Google Plus</string>
+    <string name="twitter">Twitter</string>
+
+    <string name="noticias">Noticias</string>
+    <string name="solicitudes">Solicitudes</string>
+
+    <string name="publicar">Publicar</string>
+    <string name="notificaciones">Notificaciones</string>
+    <string name="mensajes">Mensajes</string>
+
+    <string name="version_web">Version web</string>
+    <string name="compartir">Compartir</string>
+    <string name="configuracion">Configuración</string>
+
+    <string name="mensaje_compartir">Selecciona dónde quieres compartir esta aplicación:</string>
+    <string name="confirmacion_compartir">¿Compartir esta aplicación a través de los medios seleccionados?</string>
+    <string name="toast_compartir">Compartiste esta aplicación a través de:</string>
+
+    <string name="si">Si</string>
+    <string name="no">No</string>
+    <string name="nombre_usuario">Sara Caballero</string>
+    <string name="correo_usuario">aracelli.caballero@gmail.com</string>
+
+    <string-array name="tabs_facebook">
+        <item>Noticias</item>
+        <item>Solicitudes</item>
+        <item>Versión web</item>
+    </string-array>
+
+    <string-array name="tabs_instagram">
+        <item>Buscar</item>
+        <item>Publicar</item>
+        <item>Actividad</item>
+    </string-array>
+
+    <string-array name="tabs_googleplus">
+        <item>Aplicaciones</item>
+        <item>Círculos</item>
+        <item>Notificaciones</item>
+    </string-array>
+
+    <string-array name="tabs_twitter">
+        <item>Notificaciones</item>
+        <item>Mensajes</item>
+        <item>Buscar</item>
+    </string-array>
+
+    <string name="title_without_tabs">Contenido sin pestaña</string>
+<!--
+    <string name="without_tabs">Sin pestañas</string>
+    <string name="with_tabs">Con pestañas</string>
+-->
+    <string name="content_with_tabs">Contenido con pestaña</string>
+</resources>
