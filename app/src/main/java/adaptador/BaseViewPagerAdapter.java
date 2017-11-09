@@ -4,9 +4,8 @@ import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
-import android.util.Log;
 
-import com.nextu.sacc.evaluacionfinal_modulo6.BasicFragment;
+import fragment.BasicFragment;
 import com.nextu.sacc.evaluacionfinal_modulo6.R;
 
 /**

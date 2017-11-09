@@ -27,6 +27,6 @@
         android:text="@string/home"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:textColor="@color/colorPrimary"/>
+        android:textColor="@color/colorImagen"/>
 
 </LinearLayout>

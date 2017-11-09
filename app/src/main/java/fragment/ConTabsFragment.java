@@ -99,6 +99,7 @@ public class ConTabsFragment extends Fragment {
                         }
                     }
                     break;
+
                 case R.id.nav_googleplus:
                     for (int i = 0; i < tabLayout.getTabCount(); i++){
                         tab = tabLayout.getTabAt(i);
@@ -119,6 +120,7 @@ public class ConTabsFragment extends Fragment {
                         }
                     }
                     break;
+
                 case R.id.nav_twitter:
                     for (int i = 0; i < tabLayout.getTabCount(); i++){
                         tab = tabLayout.getTabAt(i);
@@ -142,7 +144,7 @@ public class ConTabsFragment extends Fragment {
             }
         }
 
-        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+        /*tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 Log.wtf("MENSAJE", "onTabSelected - idItem: " + idItem);
@@ -158,7 +160,7 @@ public class ConTabsFragment extends Fragment {
             public void onTabReselected(TabLayout.Tab tab) {
 
             }
-        });
+        });*/
 
     }
 
