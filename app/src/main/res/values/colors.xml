@@ -11,4 +11,5 @@
     <color name="colorHome">@color/colorPrimary</color>
 
     <color name="colorImagen">#bdbdbd</color>
+
 </resources>

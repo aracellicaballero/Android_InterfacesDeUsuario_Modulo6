@@ -1,16 +1,18 @@
 package com.nextu.sacc.evaluacionfinal_modulo6;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.annotation.NonNull;
+import android.support.customtabs.CustomTabsIntent;
 import android.support.design.widget.NavigationView;
-import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.SubMenu;
@@ -73,10 +75,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         subMenuVersionWeb.add(0, 5, 4, R.string.twitter).setIcon(R.drawable.tab_twitter);
 
         // Compartir
-        SubMenu subMenuCompatir = menu.addSubMenu(1, 6, 1, R.string.compartir);
+        menu.addSubMenu(1, 6, 1, R.string.compartir);
 
         // Configuración
-        SubMenu subMenuConfiguracion = menu.addSubMenu(2, 7, 1, R.string.configuracion);
+        menu.addSubMenu(2, 7, 1, R.string.configuracion);
 
         // Infla
         getMenuInflater().inflate(R.menu.menu_main, menu);
@@ -86,20 +88,37 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-
-        //Log.wtf("MENSAJE", "onOptionsItemSelected: " + id);
+        int color = 0;
 
         switch (id){
-            case 2: // Versión web - Facebook
-                break;
+            case 2:case 3:case 4:case 5: // Versión web
+                // Determina el color
+                switch (id){
+                    case 2:
+                        color = getResources().getColor(R.color.colorFacebook);
+                        break;
 
-            case 3: // Versión web - Instagram
-                break;
+                    case 3:
+                        color = getResources().getColor(R.color.colorInstagram);
+                        break;
 
-            case 4: // Versión web - Google Plus
-                break;
+                    case 4:
+                        color = getResources().getColor(R.color.colorGooglePlus);
+                        break;
 
-            case 5: // Versión web - Twitter
+                    case 5:
+                        color = getResources().getColor(R.color.colorTwitter);
+                        break;
+
+                }
+                CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
+                builder.setToolbarColor(color);
+                builder.setStartAnimations(this, android.R.anim.slide_in_left, android.R.anim.slide_out_right);
+                builder.setExitAnimations(this, android.R.anim.slide_in_left, android.R.anim.slide_out_right);
+
+                CustomTabsIntent customTabsIntent = builder.build();
+                customTabsIntent.launchUrl(this, Uri.parse(getUrl(id)));
+
                 break;
 
             case 6: // Compartir
@@ -108,11 +127,32 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
 
             case 7: // Configuración
+                startActivity(new Intent(this, ConfiguracionActivity.class));
                 break;
 
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private String getUrl(int idItem){
+        switch (idItem){
+            case 2: // Facebook
+                return "https://www.facebook.com/";
+
+            case 3: // Instagram
+                return "https://www.instagram.com/";
+
+            case 4: // Google plus
+                return "https://plus.google.com/";
+
+            case 5:
+                return "https://twitter.com/";
+
+            default:
+                return "";
+
+        }
     }
 
     @Override

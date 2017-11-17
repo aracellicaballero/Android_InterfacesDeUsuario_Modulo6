@@ -28,7 +28,15 @@
     <string name="tab_mensajes">Mensajes</string>
     <string name="compartir">Compartir</string>
     <string name="configuracion">Configuración</string>
+
     <string name="titulo_dialogo_compartir">Selecciona donde quieres compartir esta aplicación:</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="confirmacion">Confirmación</string>
+    <string name="confirma_conpartir">¿Compartir esta aplicación a través de los medios seleccionados?</string>
+    <string name="mensaje_compartir">Compartiste esta aplicación a través de:</string>
+
+    <string name="no">No</string>
+    <string name="si">Si</string>
 
     <string-array name="tabs_facebook">
         <item>@string/tab_noticias</item>

@@ -14,17 +14,13 @@ import com.nextu.sacc.evaluacionfinal_modulo6.R;
 
 public class BasicFragment extends Fragment {
 
-    ImageView imageView;
-    TextView textTitulo;
-
-    private String tituloActual;    // título
-    private int imagenActual;       // id de la imagen
-
     private static final String ARG_TITLE = "titulo";
     private static final String ARG_DRAWABLE = "imagen";
+    ImageView imageView;
+    TextView textTitulo;
+    private String tituloActual;    // título
 
     public static BasicFragment getInstance(String title){
-        //Log.wtf("MENSAJE", "getInstance: " + title);
         BasicFragment fragment = new BasicFragment();
 
         Bundle bundle = new Bundle();
@@ -39,7 +35,6 @@ public class BasicFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         if (savedInstanceState != null){
             this.tituloActual = savedInstanceState.getString(ARG_TITLE);
-            //this.imagenActual = savedInstanceState.getInt(ARG_DRAWABLE);
         }
 
         return inflater.inflate(R.layout.fragment_basic, container, false);
